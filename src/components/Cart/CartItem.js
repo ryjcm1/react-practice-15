@@ -1,19 +1,19 @@
 import classes from "./CartItem.module.css";
-import { cartActions } from "../../store/cart";
+import { cartActions } from "../../store/cart-slice";
 import { useDispatch } from "react-redux";
 
 const CartItem = (props) => {
-  const { title, quantity, total, price } = props.item;
+  const { title, quantity, total, price, id } = props.item;
   const dispatch = useDispatch()
   
   const addOne = (e) =>{
     e.preventDefault()
-    dispatch(cartActions.addOne())
+    dispatch(cartActions.addOne({id, title, price}))
   }
 
   const removeOne = (e) =>{
     e.preventDefault()
-    dispatch(cartActions.removeOne())
+    dispatch(cartActions.removeOne(id))
   }
 
   return (

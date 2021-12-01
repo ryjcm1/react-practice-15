@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit'
 
-const toggleCartSlice = createSlice({
+const uiSlice = createSlice({
     name: 'cartVisibility',
     initialState: {cartVisibility : false},
     reducers: {
@@ -10,6 +10,6 @@ const toggleCartSlice = createSlice({
     }
 })
 
-export const toggleCartActions = toggleCartSlice.actions
+export const uiActions = uiSlice.actions
 
-export default toggleCartSlice.reducer
+export default uiSlice.reducer

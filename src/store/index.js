@@ -1,11 +1,11 @@
 
 import { configureStore } from '@reduxjs/toolkit'
 
-import cartReducer from './cart'
-import toggleCartReducer from './toggleCart'
+import cartReducer from './cart-slice'
+import uiReducer from './ui-slice'
 
 const store = configureStore({
-    reducer: {toggleCart: toggleCartReducer, cart: cartReducer }
+    reducer: {ui: uiReducer, cart: cartReducer }
 })
 
 export default store

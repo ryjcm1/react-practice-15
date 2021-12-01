@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 
 function App() {
 
-  const toggleCart = useSelector((state) => state.toggleCart.cartVisibility)
+  const toggleCart = useSelector((state) => state.ui.cartVisibility)
 
   return (
     <Layout>
